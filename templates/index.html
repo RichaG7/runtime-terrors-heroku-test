@@ -390,7 +390,7 @@ cocktailsankeybuilder(cocktail_sankey);
 
 // fetch city data for busiest months, tour data (bars and restaurant recommendations) from flask app.py
 function cityData(selCity) {
-  fetch('http://localhost:4444/citydata?city='+selCity).then(d=>d.json().then((data)=>{
+  fetch('https://testing-runtime-terrors.herokuapp.com/city='+selCity).then(d=>d.json().then((data)=>{
     tbl = document.getElementById('busyMonthsTable')
     tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
     console.log(data) 
