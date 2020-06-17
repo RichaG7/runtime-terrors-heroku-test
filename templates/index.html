@@ -393,7 +393,7 @@ function cityData(selCity) {
   d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then((data) => {
     console.log(data) 
 
-    logo = document.getElementById('banner')
+    logo = document.getElementById('logo')
     logo.innerHTML=`<p>You got ${selCity}!</p>`
 
     // Busy Months
