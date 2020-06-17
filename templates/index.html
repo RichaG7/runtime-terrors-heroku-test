@@ -105,10 +105,8 @@ input {
     <div id="jsObject">
         <div class="container-fluid" id="container2">
             <div class="row" id="container2">
-                <div class="col-md">
-                    <div class="card text-center pt-3 mb-2 mt-2">
-                        <h3><strong>Top Five Restaurants</strong></h3>
-                    </div>
+               <div class="card-header text-center">
+                  <h3><strong>Top 5 Bars!</strong></h3>
                 </div>
                 <div class="card-deck">
                     <div class="card m-2">
@@ -152,7 +150,6 @@ input {
                         </div>
                     </div>
                     <div class="card-body text-center">
-                        <p><em>busy months </em></p>
                     </div>
                 </div>
             </div>
@@ -398,7 +395,7 @@ function cityData(selCity) {
 
     // Top tours
     tour_table = document.getElementById('to-do-list')
-    tour_table.innerHTML=`<thead><tr><th>Top10 Tours in the ${selCity}</th></thead>`
+    tour_table.innerHTML=`<thead><tr><th>Top 10 Tours in ${selCity}</th></thead>`
     data.tourdata[0].top10_tour.forEach(tour => { 
       tr = document.createElement('tr')
       td = document.createElement('td')
