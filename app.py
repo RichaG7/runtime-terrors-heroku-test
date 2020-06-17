@@ -9,26 +9,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
-# mongo = PyMongo(app, uri="mongodb+srv://marissacasazza:1234567890@cluster0-bmjvi.mongodb.net/cityDB?retryWrites=true&w=majority")
-mongo2 = PyMongo(app, uri="mongodb://localhost:27017/sankey_data")
+mongo = PyMongo(app, uri="mongodb+srv://marissacasazza:1234567890@cluster0-bmjvi.mongodb.net/cityDB?retryWrites=true&w=majority")
 
 # Route for home page
 @app.route('/')
 def index():
     return render_template('/index.html')
-
-# Route for beer sankey data
-@app.route('/beer')
-def beer():
-    beer_sankey = mongo2.db.collection.beer_sankey.find({})
-    return(beer_sankey)
-
-# Route for cocktail sankey data
-@app.route('/cocktail')
-def cocktail():
-    cocktail_sankey = mongo2.db.collection.cocktail_sankey.find({})
-    return(cocktail_sankey)
-
 
 # Route that will trigger the scrape function
 
