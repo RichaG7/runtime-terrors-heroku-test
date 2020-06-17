@@ -5,22 +5,18 @@ import os
 
 
 # Create an instance of Flask
-app = Flask(__name__, static_folder='/static', static_url_path='')
+app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/cityDB")
-mongo2 = PyMongo(app, uri="mongodb://localhost:27017/sankey_data")
 
 # Route for home page
 
 @app.route('/')
 def index():
-
-    beer_sankey = mongo2.db.collection.find_one()
-    cocktail_sankey = mongo2.db.collection.find_one()
-
-    return render_template('/index.html', beer_sankey=beer_sankey, cocktail_sankey=cocktail_sankey)
+    
+    return render_template('/index.html')
     
 # Route that will trigger the scrape function
 
