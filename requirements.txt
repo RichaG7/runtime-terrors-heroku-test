@@ -9,3 +9,4 @@ pandas>=1.0.4
 selenium>=3.141.0
 splinter>=0.13.0
 flask_cors
+dnspython

@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Use PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb+srv://marissacasazza:1234567890@cluster0-bmjvi.mongodb.net/cityDB?retryWrites=true&w=majority")
+# mongo = PyMongo(app, uri="mongodb+srv://marissacasazza:1234567890@cluster0-bmjvi.mongodb.net/cityDB?retryWrites=true&w=majority")
 mongo2 = PyMongo(app, uri="mongodb://localhost:27017/sankey_data")
 
 # Route for home page
