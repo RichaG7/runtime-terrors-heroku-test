@@ -382,6 +382,30 @@ function cityData(selCity) {
         tr.appendChild(td)
         tbl.appendChild(tr);
     });
+
+    // Top Bars
+    resCard1 = document.getElementById('card_id_1')
+    resCard2 = document.getElementById('card_id_2')
+    resCard3 = document.getElementById('card_id_3')
+    resCard4 = document.getElementById('card_id_4')
+    resCard5 = document.getElementById('card_id_5')
+    console.log(data.tourdata[0].selCity.top10_bar)
+    resCard1.innerHTML = data.tourdata[0].selCity.top10_bar[0]
+    resCard2.innerHTML = data.tourdata[0].selCity.top10_bar[1]
+    resCard3.innerHTML = data.tourdata[0].selCity.top10_bar[2]
+    resCard4.innerHTML = data.tourdata[0].selCity.top10_bar[3]
+    resCard5.innerHTML = data.tourdata[0].selCity.top10_bar[4]
+
+    // Top tours
+    tour_table = document.getElementById('to-do-list')
+    tour_table.innerHTML=`<thead><tr><th>Top10 Tours in the ${selCity}</th></thead>`
+    data.tourdata[0].selCity.top10_tour.forEach(tour => { 
+      tr = document.createElement('tr')
+      td = document.createElement('td')
+      td.innerHTML= `<b>${tour}</b>`
+      tr.appendChild(td)
+      tour_table.appendChild(tr);
+    });
   };
 )};
 
