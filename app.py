@@ -5,7 +5,7 @@ import os
 
 
 # Create an instance of Flask
-app = Flask(__name__, static_folder='static', static_url_path='')
+app = Flask(__name__, static_folder='/static', static_url_path='')
 CORS(app)
 
 # Use PyMongo to establish Mongo connection

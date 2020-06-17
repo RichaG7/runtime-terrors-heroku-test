@@ -107,7 +107,7 @@ function showDiv() {
 }
 
 function beersankeybuilder() {
-  d3.json("beer_sankey").then((data) => {
+  d3.json("/beer_sankey").then((data) => {
     var chartdata = {
       type: "sankey",
       orientation: "h",
@@ -144,7 +144,7 @@ function beersankeybuilder() {
 
 
 function cocktailsankeybuilder() {
-  d3.json("cocktail_sankey").then((data) => {
+  d3.json("/cocktail_sankey").then((data) => {
     var chartdata = {
       type: "sankey",
       orientation: "h",
