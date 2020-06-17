@@ -252,7 +252,7 @@ function data_log() {
     attribute = event.target.value;
     selCity = destination();
     showDiv();
-    cityData()
+    cityData(selCity)
   };
 };
 
@@ -370,7 +370,7 @@ cocktailsankeybuilder(cocktail_sankey);
 
 // fetch city data for busiest months, tour data (bars and restaurant recommendations) from flask app.py
 function cityData(selCity) {
-  d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then(data => {
+  d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then((data) => {
     console.log(data) 
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
