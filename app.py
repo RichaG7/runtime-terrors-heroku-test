@@ -10,14 +10,28 @@ CORS(app)
 
 # Use PyMongo to establish Mongo connection
 mongo = PyMongo(app, uri="mongodb://localhost:27017/cityDB")
+mongo2 = PyMongo(app, uri="mongodb://localhost:27017/sankey_data")
 
 # Route for home page
-
 @app.route('/')
 def index():
+    beer_sankey = mongo.db.collection.find({})
     
     return render_template('/index.html')
+
+# Route for beer sankey data
+@app.route('/beer')
+def index():
+    beer_sankey = mongo2.db.collection.beer_sankey.find({})
+    return(beer_sankey)
     
+# Route for cocktail sankey data
+@app.route('/cocktail')
+def index():
+    cocktail_sankey = mongo2.db.collection.cocktail_sankey.find({})
+    return(cocktail_sankey)
+
+
 # Route that will trigger the scrape function
 
 @app.route("/citydata", methods=["GET", "POST"])
