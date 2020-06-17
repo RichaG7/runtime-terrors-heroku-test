@@ -370,14 +370,11 @@ cocktailsankeybuilder(cocktail_sankey);
 
 // fetch city data for busiest months, tour data (bars and restaurant recommendations) from flask app.py
 function cityData(selCity) {
-  d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then((data) => {
-
+  d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then(data => {
     console.log(data) 
-    
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
     tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
-
     data.top5.result.forEach(city => { 
         tr = document.createElement('tr')
         td = document.createElement('td')
@@ -385,70 +382,8 @@ function cityData(selCity) {
         tr.appendChild(td)
         tbl.appendChild(tr);
     });
-
-    // Top Bars
-    resCard1 = document.getElementById('card_id_1')
-    resCard2 = document.getElementById('card_id_2')
-    resCard3 = document.getElementById('card_id_3')
-    resCard4 = document.getElementById('card_id_4')
-    resCard5 = document.getElementById('card_id_5')
-
-    console.log(data.tourdata[0].selCity.top10_bar)
-
-    resCard1.innerHTML = data.tourdata[0].selCity.top10_bar[0]
-    resCard2.innerHTML = data.tourdata[0].selCity.top10_bar[1]
-    resCard3.innerHTML = data.tourdata[0].selCity.top10_bar[2]
-    resCard4.innerHTML = data.tourdata[0].selCity.top10_bar[3]
-    resCard5.innerHTML = data.tourdata[0].selCity.top10_bar[4]
-
-    // Top tours
-    tour_table = document.getElementById('to-do-list')
-    tour_table.innerHTML=`<thead><tr><th>Top10 Tours in the ${selCity}</th></thead>`
-    data.tourdata[0].selCity.top10_tour.forEach(tour => { 
-      tr = document.createElement('tr')
-      td = document.createElement('td')
-      td.innerHTML= `<b>${tour}</b>`
-      tr.appendChild(td)
-      tour_table.appendChild(tr);
-    });
-    
-    // create the map
-    tour_table = document.getElementById('bar_map')
-    queryUrl = "https://raw.githubusercontent.com/RichaG7/runtime-terrors/master/templates/cities.json"
-    
-    d3.json(queryUrl).then((data) => {
-      var lat = data.selCity[0];
-      var lng = data.selCity[1];
-      var myMap = L.map("bar_map", {
-        center: [lat, lng],
-        zoom: 11
-      });
-      L.tileLayer(MAP_URL, {
-        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-        maxZoom: 18,
-         id: 'mapbox/streets-v11',
-        accessToken: API_KEY
-      }).addTo(myMap);
-      
-      var response = data.top10_bar_location;
-      var markers = L.markerClusterGroup();
-      for (var i = 0; i < response.length; i++) {
-        // console.log(response[i])
-        // Set the data location property to a variable
-        if (response[i].latitude) {
-        
-          var latitude = response[i].latitude;
-      
-          var longitude = response[i].longitude;
-        
-          markers.addLayer(L.marker([latitude, longitude]));
-        }};
-      
-      myMap.addLayer(markers);
-      })
-    }
-  );
-};
+  };
+)};
 
   </script>
 
