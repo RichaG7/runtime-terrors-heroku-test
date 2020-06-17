@@ -1,0 +1,121 @@
+geometry_location_lat,geometry_location_lng,name,location
+39.753454,-104.998467,Wynkoop Brewing Company,Denver
+39.763171,-104.981361,Epic Brewing Company,Denver
+39.758225,-105.0073556,Denver Beer Co,Denver
+39.7614592,-105.0066456,Prost Brewing Co. & Biergarten - Denver,Denver
+39.7552332,-104.9770723,Spangalang Brewery,Denver
+39.752232,-104.991415,Jagged Mountain Craft Brewery,Denver
+39.7586602,-105.0153262,Zuni Street Brewing Company,Denver
+39.7214067,-104.9870068,Baere Brewing Company,Denver
+39.7789062,-105.0435791,Call to Arms Brewing Company,Denver
+39.7397474,-104.9454461,Cerebral Brewing,Denver
+39.7630916,-105.0347925,Oasis Brewing Co.,Denver
+39.7453699,-105.0053835,Tivoli Brewing Co. Tap House,Denver
+39.7736528,-104.9769889,Blue Moon Brewing Company,Denver
+39.776061,-105.043509,"De Steeg Brewing - Entrance in ""The Alley""",Denver
+39.7293111,-104.9859167,Lowdown Brewery,Denver
+39.7237459,-105.0004981,Crazy Mountain Brewery,Denver
+39.7703523,-105.0031355,Diebolt Brewing Company,Denver
+39.7509139,-104.9845517,Woods Boss Brewing Company,Denver
+39.7697388,-104.9728259,Black Shirt Brewing Co,Denver
+39.7306167,-104.9993056,Renegade Brewing Company,Denver
+39.982431,-75.127061,Philadelphia Brewing Co,Philadelphia
+39.96028889999999,-75.15557230000002,Love City Brewing,Philadelphia
+39.926384,-75.1730315,Second District Brewing Company,Philadelphia
+39.9623669,-75.1360404,Mainstay Independent Brewing Company,Philadelphia
+39.974458,-75.18084,Crime and Punishment Brewing Co.,Philadelphia
+39.9484375,-75.1435245,2nd Story Brewing,Philadelphia
+39.9649761,-75.1356784,Goose Island Brewhouse,Philadelphia
+39.9477506,-75.2227932,Dock Street Brewery West,Philadelphia
+39.9757949,-75.133939,Evil Genius Beer Company,Philadelphia
+39.923956,-75.17887499999999,Brewery ARS,Philadelphia
+39.9392514,-75.1796686,Dock Street Brewery South,Philadelphia
+39.9736437,-75.1395908,Punch Buggy Brewing Company,Philadelphia
+39.9609712,-75.1469089,Yards Brewing Company,Philadelphia
+39.9703808,-75.1291121,Kurant Brew & Brew,Philadelphia
+39.9841345,-75.1373674,After Midnight Brewing,Philadelphia
+39.951437,-75.1801053,Workhorse Brewing Company (Delivery Only!),Philadelphia
+39.976536,-75.1374119,Fermentery Form,Philadelphia
+39.99261509999999,-75.1084719,Sacred Vice Brewing Company,Philadelphia
+39.9289362,-75.1650835,Separatist South Philly,Philadelphia
+39.96137179999999,-75.15400559999999,Roy Pitz Barrel House,Philadelphia
+40.6985551,-73.9712029,Transmitter Brewing,New_York_City
+40.7060658,-73.9236918,Kings County Brewers Collective,New_York_City
+40.7217625,-73.9577086,Brooklyn Brewery,New_York_City
+40.69166,-73.986036,Circa Brewing Co.,New_York_City
+40.6949906,-73.904021,Queens Brewery,New_York_City
+40.6963598,-73.9041378,Evil Twin Brewing NYC,New_York_City
+40.7465012,-73.9515405,Fifth Hammer Brewing Company,New_York_City
+40.7471787,-73.9549285,Rockaway Brewing Company,New_York_City
+40.7520862,-73.9505873,Big aLICe Brewing,New_York_City
+40.714267,-73.936528,Grimm Artisanal Ales,New_York_City
+40.7127146,-73.9370439,Interboro Spirits & Ales,New_York_City
+40.7501896,-73.9488192,ICONYC Brewing Company LIC,New_York_City
+40.7196427,-73.9394933,18th Ward Brewing,New_York_City
+40.7304321,-73.9578173,Threes Brewing Greenpoint,New_York_City
+40.73768,-73.9552235,Greenpoint Beer & Ale Co.,New_York_City
+40.693822,-73.902835,Bridge and Tunnel Brewery,New_York_City
+40.7265828,-73.94020139999999,War Flag Brewing Company,New_York_City
+40.7549273,-73.9392266,LIC Beer Project,New_York_City
+40.7066639,-73.8732924,Finback Brewery,New_York_City
+40.7240508,-73.9503414,Keg & Lantern Brewing Company,New_York_City
+42.3221186,-71.06267199999999,Dorchester Brewing Company,Boston
+42.3551124,-71.0621669,Democracy Brewing,Boston
+42.3679837,-71.0978914,Lamplighter Brewing Co.,Boston
+42.392658,-71.09398399999999,Winter Hill Brewing Company,Boston
+42.4055753,-71.06573,Bone Up Brewing Co.,Boston
+42.3672824,-71.09022639999999,Cambridge Brewing Company,Boston
+42.3810179,-71.0982183,Remnant Brewing,Boston
+42.3469065,-71.0344387,Harpoon Brewery & Beer Hall,Boston
+42.3819849,-71.10624539999999,Aeronaut Brewing Company,Boston
+42.3472766,-71.0948014,Cheeky Monkey Brewing Co.,Boston
+42.3521739,-71.047469,Trillium Brewing Company,Boston
+42.4025721,-71.0515875,BearMoose Brewing Company,Boston
+42.4059707,-71.067886,Night Shift Brewing - Everett,Boston
+42.3748169,-71.0892519,Somerville Brewing Company - Slumbrew,Boston
+42.3471775,-71.03409649999999,Mass Bay Brewing Co,Boston
+42.3513292,-71.0653274,Rock Bottom Restaurant & Brewery,Boston
+42.3673476,-71.0595684,Night Shift Brewing - Lovejoy Wharf,Boston
+42.3985863,-71.0612645,Down the Road Beer Co.,Boston
+42.3642794,-71.0324945,Downeast Cider House,Boston
+42.377801,-71.091881,Bantam Cider Company,Boston
+29.9172045,-90.09866770000001,Port Orleans Brewing Co.,New_Orleans
+29.940019,-90.07186639999999,The Courtyard Brewery,New_Orleans
+29.9626495,-90.05723619999999,Brieux Carré Brewing Co.,New_Orleans
+29.92975199999999,-90.06702299999999,Urban South Brewery,New_Orleans
+29.9205538,-90.08019399999999,Miel Brewery & Taproom,New_Orleans
+29.9197607,-90.0816942,New Orleans Lager & Ale (NOLA) Brewing,New_Orleans
+29.9412152,-90.07786999999999,All Relation Brewing,New_Orleans
+29.948039,-90.064942,Gordon Biersch Brewery Restaurant,New_Orleans
+29.952161,-90.09755779999999,Zony Mash Beer Project,New_Orleans
+29.951456,-90.0999744,Broad Street Cider,New_Orleans
+29.96072899999999,-90.03399,Parleaux Beer Lab,New_Orleans
+29.982552,-90.1052855,Second Line Brewing,New_Orleans
+29.904186,-90.052118,Luncheon Meat Louies,New_Orleans
+29.9299297,-90.06707990000001,Craft Kettle Brewing Equipment,New_Orleans
+29.9803225,-90.07333539999999,Insanitea Kombucha,New_Orleans
+29.9568538,-90.09781219999999,Big Easy Bucha,New_Orleans
+29.9684801,-90.0550919,Kajun's Pub,New_Orleans
+29.9558511,-90.0629666,Shops At Jax Brewery,New_Orleans
+29.9560055,-90.0960102,"Atelier Vie, LLC",New_Orleans
+29.9556806,-90.0638855,Crescent City Brewhouse,New_Orleans
+37.8058697,-122.4230558,San Francisco Brewing Co.,San_Francisco
+37.7764809,-122.3971189,Local Brewing Co.,San_Francisco
+37.7634526,-122.4010446,Anchor Brewing Company,San_Francisco
+37.7398597,-122.4091179,Barebottle Brewing Company,San_Francisco
+37.777171,-122.41073,Cellarmaker Brewing Co.,San_Francisco
+37.7806806,-122.3969583,Black Hammer Brewing,San_Francisco
+37.7854669,-122.3996207,ThirstyBear Brewing Company,San_Francisco
+37.7703924,-122.4451482,Magnolia Brewing - Haight,San_Francisco
+37.7577344,-122.3880825,Magnolia Brewing - Dogpatch,San_Francisco
+37.76121,-122.388459,Triple Voodoo Brewery,San_Francisco
+37.768473,-122.419455,Standard Deviant Brewing,San_Francisco
+37.7537616,-122.4824114,Sunset Reservoir Brewing Company,San_Francisco
+37.75161600000001,-122.390041,Harmonic Brewing,San_Francisco
+37.7973181,-122.410047,Holy Craft Brewery Taproom,San_Francisco
+37.7381083,-122.3806219,Speakeasy Ales & Lagers,San_Francisco
+37.7611234,-122.4191329,Lupulandia Brewing,San_Francisco
+37.76313,-122.412411,Dirty Robot Brew Works,San_Francisco
+37.8031053,-122.4648487,Fort Point Beer Company Production Brewery,San_Francisco
+37.7757457,-122.3902222,Little Creatures Brewing Mission Bay,San_Francisco
+37.7456981,-122.4194949,Cellarmaker Brewing,San_Francisco

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--head info-->
+<head>
+  <title>The Alcoholism Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+<style>
+#logo{
+    background-color:#a67c00!important; 
+    padding: 10px;
+}
+#navbar-main{
+    height: 70px;
+}
+#jumbotron{
+    padding: 130px;
+}
+body {
+    font-family: 'Montserrat';font-size: 16px;
+}
+#jumbo-tile {
+    font-size: 3em;
+    ;
+}
+.card {
+    min-width: 25%;
+}
+.jumbotron {
+    background-image: url("https://images.unsplash.com/photo-1576271758698-e64b83251f4a");
+    background-size: cover;
+
+}
+
+input {
+    background-color: transparent;
+    border: 0px solid;
+}
+</style>
+
+<!---main body-->
+<body>
+    <div class="jumbotron card card-image" style=" height:600px; margin-bottom:0; background-size: cover; padding:130px; background-image: url(https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1720&q=80);">
+        <div class="text-white text-center" style="margin-bottom:0;" id="jumbotron-tile">
+            <div id='jumbo-title'class="card-title h1-responsive pt-3 mb-5 font-bold">
+                <h1  id='city-name'><b>City Cocktails</b></h1>
+            </div>
+                <p style="font-size:24px; padding-top:4px;">Choose your own cocktail and adventure!</p> 
+        </div>
+    </div>
+
+    <!---Navigation Bar-->
+    <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark" id='navbar-main'>
+        <a class="navbar-brand" href="index.html" id='logo'>City Cocktails</a>
+    </nav>
+
+    <!--PAGE-->
+    <div class="container-fluid" id="container1">
+        <br>
+        <p>Have you ever been on a vacation only to be let down by the available alcohol options? Did you know that all of the Catskills region only have, like, three breweries (for reference, Brooklyn has more than three)?</p>
+        <p>Fear not, for our website will help you pick a city suited to your alcohol needs. Simply take our test, and then explore the options in the city you get!</p>
+    </div>
+        <!--Rest of the body-->
+    
+        <div class="row" id="container1">
+            <div class="col-md" id="container2">
+                <div class="container">
+                    <div class="card-header text-center">
+                    <h3><strong>Take our test!</strong></h3>
+                    </div>
+                    <div class="card-deck text-center">
+                        <p>If you had to choose a type of alcoholic beverage to drink for the rest of your life, which ONE of the following would you choose?</p>
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <input type="button" onclick="beerclick(this.value); data_log(this.value)" value="Beer" id="Beer">
+                            </div>
+                        </div>
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <input type="button" onclick="cocktailclick(this.value); data_log(this.value)" value="Cocktails" id="Cocktails">
+                            </div>
+                        </div>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="card-deck text-center" id="selDataset">
+                        <p>And if you had to choose your favorite <u>attribute</u> of your alcoholic beverage of choice, which ONE of the following would you choose?</p>
+                    </div>
+                    </br>
+                    </br>
+                    <!--input type="button" onclick="test(this.value)" value="Test" id="Cocktails"-->
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Top Restaurants-->
+    <div id="jsObject">
+        <div class="container-fluid" id="container2">
+            <div class="row" id="container2">
+                <div class="col-md">
+                    <div class="card text-center pt-3 mb-2 mt-2">
+                        <h3><strong>Top Five Restaurant</strong></h3>
+                    </div>
+                </div>
+                <div class="card-deck">
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Res One</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Res Two</h5>
+                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Res Three</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Res Four</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Res Five</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Top Tours-->
+        <div class="container-fluid" id="container2">
+            <div class="row" id="container2">
+                <div class="col-md-8 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3><strong>Top Tours</strong></h3>
+                        </div>
+                    </div>
+                    <div class="card-body" id='to-do-list'>
+                        <tbody></tbody>
+                            <p></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-2">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <h3><strong>Avoid These Months</strong></h3>
+                            <table id="busyMonthsTable" style="width:250px"></table>
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <p><em>busy months </em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!--Map-->
+            <div class="row" id="container1">
+                <div class="col-md" id="bar_map">
+                    <h3><strong>Map Division</strong></h3>
+                </div>
+            </div>
+
+            <!--Some trivia about the city-->
+            <!--Table-->
+            <div class="row">
+                <!--Tabulated facts-->
+                <div class="col-md-4" id="container5">
+                    <!--Facts-->
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+        <div class="row" id="container2">
+            <div class="col-md">
+                <div class="container">
+                    <div class="card-header text-center">
+                    <h3><strong>How do we calculate your results?</strong></h3>
+                    </div>
+                </div>
+                <div class="col-md-8" style="margin:0 auto;">
+                    <p>We analyzed the composition of around 1000 beers and around 1000 cocktails to arrive at a scientific estimation of your favorite alcohol, then match it with the drinks available in various American cities.</p>
+                    <div id="sankey_beer"></div>
+                    <div id="sankey_cocktails"></div>
+                </div>
+            </div>
+        </div>
+
+  <!-- Footer -->
+  <footer class="footer-nav"></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script>
+  
+  var quizData_beer = ['Sour', 'Sweet', 'Malty', 'Bitter', 'Dense'];
+var quizData_cocktail = ['Sour', 'Sweet', 'Smokey', 'Spicy', 'Smooth'];
+
+var beverage = "";
+var attribute = "";
+var selCity = "";
+
+var div = document.getElementById('jsObject');
+
+div.style.visibility = 'hidden';
+
+function beerclick() {
+    var attributes = quizData_beer;
+
+    var selector = d3.select('#selDataset');
+
+    attributes.forEach(name => {
+                    selector.append("div")
+                            .attr("class", "card m-2 shadow")
+                            .each(function(d) {
+                              d3.select(this).append("div")
+                                .attr("class", "card-body")
+                                .each(function(e) {
+                                  d3.select(this).append("input")
+                                                .property("type", "button")
+                                                .property("value", name)
+                                                .property("id", name)
+                                                .attr("onclick", "data_log(this.value)")
+                                                .text(name);
+                                              });
+                              });
+                      });
+};
+
+function cocktailclick() {
+  var attributes = quizData_cocktail;
+
+  var selector = d3.select('#selDataset');
+
+  attributes.forEach(name => {
+                  selector.append("div")
+                          .attr("class", "card m-2 shadow")
+                          .each(function(d) {
+                            d3.select(this).append("div")
+                              .attr("class", "card-body")
+                              .each(function(e) {
+                                d3.select(this).append("input")
+                                              .property("type", "button")
+                                              .property("value", name)
+                                              .property("id", name)
+                                              .attr("onclick", "data_log(this.value)")
+                                              .text(name);
+                                            });
+                            });
+                    });
+};
+
+function data_log() {
+  if (event.target.value === 'Beer' || event.target.value === 'Cocktails') {
+    beverage = event.target.value
+  } else {
+    attribute = event.target.value;
+    selCity = destination();
+    showDiv();
+    cityData()
+  };
+};
+
+function destination() {
+  if (beverage === "Beer" && attribute === "Sour") {
+    var selCity = "Denver";
+    console.log(selCity);
+  } else if (beverage === "Beer" && attribute === "Sweet") {
+    var selCity = "Philadelphia";
+    console.log(selCity);
+  } else if (beverage === "Beer" && attribute === "Malty") {
+    var selCity = "Boston";
+    console.log(selCity);
+  } else if (beverage === "Beer" && attribute === "Bitter") {
+    var selCity = "New_York_City";
+    console.log(selCity);
+  } else if (beverage === "Beer" && attribute === "Dense") {
+    var selCity = "San_Francisco";
+    console.log(selCity);
+  } else if (beverage === "Cocktails" && attribute === "Sour") {
+    var selCity = "Denver";
+    console.log(selCity);
+  } else if (beverage === "Cocktails" && attribute === "Sweet") {
+    var selCity = "Philadelphia";
+    console.log(selCity);
+  } else if (beverage === "Cocktails" && attribute === "Smokey") {
+    var selCity = "Boston";
+    console.log(selCity);
+  } else if (beverage === "Cocktails" && attribute === "Spicy") {
+    var selCity = "New_York_City";
+    console.log(selCity);
+  } else if (beverage === "Cocktails" && attribute === "Smooth") {
+    var selCity = "San_Francisco";
+    console.log(selCity);
+  };
+
+  return selCity
+};
+
+function showDiv() {
+  div.style.visibility = 'visible';
+}
+
+function beersankeybuilder() {
+  d3.json("/beer_sankey.json").then((data) => {
+    var chartdata = {
+      type: "sankey",
+      orientation: "h",
+      node: {
+        pad: 15,
+        thickness: 30,
+        line: {
+          color: "black",
+          width: 0.5
+        },
+       label: data.labels,
+       color: "#a67c00"
+          },
+    
+      link: {
+        source: data.source,
+        target: data.target,
+        value:  data.value
+      }
+    }
+    
+    var chartdata = [chartdata]
+
+    var layout = {
+      title: "Beer Categories",
+      font: {
+        size: 10
+      },
+      height: 2700
+    }  
+    Plotly.react('sankey_beer', chartdata, layout)  
+  });
+};
+
+
+function cocktailsankeybuilder() {
+  d3.json("/cocktail_sankey.json").then((data) => {
+    var chartdata = {
+      type: "sankey",
+      orientation: "h",
+      node: {
+        pad: 15,
+        thickness: 30,
+        line: {
+          color: "black",
+          width: 0.5
+        },
+       label: data.labels,
+       color: "#a67c00"
+          },
+    
+      link: {
+        source: data.source,
+        target: data.target,
+        value:  data.value
+      }
+    }
+    
+    var chartdata = [chartdata]
+
+    var layout = {
+      title: "Cocktail Categories",
+      font: {
+        size: 10
+      },
+      height: 2700
+    }  
+    Plotly.react('sankey_cocktails', chartdata, layout)  
+  });
+};
+
+beersankeybuilder();
+cocktailsankeybuilder();
+
+// fetch city data for busiest months, tour data (bars and restaurant recommendations) from flask app.py
+function cityData(selCity) {
+  fetch('http://localhost:4444/citydata?city='+selCity).then(d=>d.json().then((data)=>{
+    tbl = document.getElementById('busyMonthsTable')
+    tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
+    console.log(data) 
+    data.top5.result.forEach(city => { 
+        tr = document.createElement('tr')
+        td = document.createElement('td')
+        td.innerHTML= `<b>${city}</b>`
+        tr.appendChild(td)
+        tbl.appendChild(tr);
+    });
+    resCard1 = document.getElementById('card_id_1')
+    resCard2 = document.getElementById('card_id_2')
+    resCard3 = document.getElementById('card_id_3')
+    resCard4 = document.getElementById('card_id_4')
+    resCard5 = document.getElementById('card_id_5')
+    console.log(data.top5pubs)
+    resCard1.innerHTML = data.top5pubs.result[0][0]
+    resCard2.innerHTML = data.top5pubs.result[0][1]
+    resCard3.innerHTML = data.top5pubs.result[0][2]
+    resCard4.innerHTML = data.top5pubs.result[0][3]
+    resCard5.innerHTML = data.top5pubs.result[0][4]
+    tour_table = document.getElementById('to-do-list')
+    tour_table.innerHTML=`<thead><tr><th>Top10 Tours in the ${selCity}</th></thead>`
+    data.tourdata[0].top10_tour.forEach(bar => { 
+      tr = document.createElement('tr')
+      td = document.createElement('td')
+      td.innerHTML= `<b>${bar}</b>`
+      tr.appendChild(td)
+      tour_table.appendChild(tr);
+    });
+    
+    // create the map
+    tour_table = document.getElementById('bar_map')
+    queryUrl = "https://raw.githubusercontent.com/RichaG7/runtime-terrors/master/templates/cities.json"
+    
+    d3.json(queryUrl).then((data) => {
+      var lat = data.selCity[0];
+      var lng = data.selCity[1];
+      var myMap = L.map("bar_map", {
+        center: [lat, lng],
+        zoom: 11
+      });
+      L.tileLayer(MAP_URL, {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+         id: 'mapbox/streets-v11',
+        accessToken: API_KEY
+      }).addTo(myMap);
+      
+      var response = data.top10_bar_location;
+      var markers = L.markerClusterGroup();
+      for (var i = 0; i < response.length; i++) {
+        // console.log(response[i])
+        // Set the data location property to a variable
+        if (response[i].latitude) {
+        
+          var latitude = response[i].latitude;
+      
+          var longitude = response[i].longitude;
+        
+          markers.addLayer(L.marker([latitude, longitude]));
+        }};
+      
+      myMap.addLayer(markers);
+      })
+    }
+  ));
+};
+
+
+  </script>
+
+</body>
+</html>
+
+
