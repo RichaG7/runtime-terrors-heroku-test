@@ -51,7 +51,7 @@ input {
             <div id='jumbo-title'class="card-title h1-responsive pt-3 mb-5 font-bold">
                 <h1  id='city-name'><b>City Cocktails</b></h1>
             </div>
-                <p style="font-size:34px; padding-top:5px;text-shadow: 2px 2px black;">Choose your own cocktail and adventure!</p> 
+                <p style="font-size:24px; padding-top:4px;">Choose your own cocktail and adventure!</p> 
         </div>
     </div>
 
@@ -103,30 +103,25 @@ input {
 
         <!--Top Restaurants-->
     <div id="jsObject">
-        <div class="col-md" id="container2">
-            <div class="container" id="logo">
-                </div>
-                <div class="card-deck">
-                </div>
-            </div>
-        <div class="col-md" id="container2">
-            <div class="container">
-                  <h3><strong>Top 5 Bars!</strong></h3>
-                </div> 
-                <div class="card-deck">
-                    <div class="card m-2 shadow">
+          <div class="col-md" id="container2">
+              <div class="container">
+                  <div class="card-header text-center">
+                      <h3><strong>Top 5 Bars!</strong></h3>
+                  </div>
+                  <div class="card-deck">
+                    <div class="card m-2">
                         <div class="card-body" id="card_id_1"></div>
                     </div>
-                    <div class="card m-2 shadow">
+                    <div class="card m-2">
                         <div class="card-body" id="card_id_2"></div>
                     </div>
-                    <div class="card m-2 shadow">
+                    <div class="card m-2">
                         <div class="card-body" id="card_id_3"></div>
                     </div>
-                    <div class="card m-2 shadow">
+                    <div class="card m-2">
                         <div class="card-body" id="card_id_4"></div>
                     </div>
-                    <div class="card m-2 shadow">
+                    <div class="card m-2">
                         <div class="card-body" id="card_id_5"></div>
                     </div>
                 </div>
@@ -160,8 +155,6 @@ input {
                 <div class="col-md-12">
                     <div class="card text-center">
                         <div class="card-header"></div>
-                    </div>
-                    <div class="card-body" id="bar_map">
                     </div>
                 </div>
             </div>
@@ -392,10 +385,6 @@ cocktailsankeybuilder(cocktail_sankey);
 function cityData(selCity) {
   d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then((data) => {
     console.log(data) 
-
-    logo = document.getElementById('logo')
-    logo.innerHTML=`<p>You got ${selCity}!</p>`
-
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
     tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
@@ -430,38 +419,6 @@ function cityData(selCity) {
       tr.appendChild(td)
       tour_table.appendChild(tr);
     });
-
-    d3.json(cities).then((data) => {
-      var lat = data.selCity[0];
-      var lng = data.selCity[1];
-      var myMap = L.map("bar_map", {
-        center: [lat, lng],
-        zoom: 11
-      });
-      L.tileLayer(MAP_URL, {
-        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
-        maxZoom: 18,
-         id: 'mapbox/streets-v11',
-        accessToken: API_KEY
-      }).addTo(myMap);
-      
-      var response = data.tourdata[0].top10_bar_location;
-      var markers = L.markerClusterGroup();
-      for (var i = 0; i < response.length; i++) {
-        // console.log(response[i])
-        // Set the data location property to a variable
-        if (response[i].latitude) {
-        
-          var latitude = response[i].latitude;
-      
-          var longitude = response[i].longitude;
-        
-          markers.addLayer(L.marker([latitude, longitude]));
-        }};
-      
-      myMap.addLayer(markers);
-    });
-
   });
 };
 
