@@ -51,7 +51,7 @@ input {
             <div id='jumbo-title'class="card-title h1-responsive pt-3 mb-5 font-bold">
                 <h1  id='city-name'><b>City Cocktails</b></h1>
             </div>
-                <p style="font-size:24px; padding-top:4px;">Choose your own cocktail and adventure!</p> 
+                <p style="font-size:34px; padding-top:5px;text-shadow: 2px 2px black;">Choose your own cocktail and adventure!</p> 
         </div>
     </div>
 
@@ -105,6 +105,7 @@ input {
     <div id="jsObject">
         <div class="col-md" id="container2">
             <div class="container">
+                <div class="card-header text-center" id="logo"></div>
                 <div class="card-header text-center">
                   <h3><strong>Top 5 Bars!</strong></h3>
                 </div>
@@ -387,6 +388,10 @@ cocktailsankeybuilder(cocktail_sankey);
 function cityData(selCity) {
   d3.json('https://testing-runtime-terrors.herokuapp.com/citydata?city='+selCity).then((data) => {
     console.log(data) 
+
+    logo = document.getElementById('banner')
+    logo.innerHTML=`<p>You got ${selCity}!</p>`
+
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
     tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
