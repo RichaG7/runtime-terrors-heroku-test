@@ -316,7 +316,7 @@ function showDiv() {
   div.style.visibility = 'visible';
 }
 
-function beersankeybuilder(beer_sankey) {
+function beersankeybuilder(data) {
     var chartdata = {
       type: "sankey",
       orientation: "h",
@@ -327,14 +327,14 @@ function beersankeybuilder(beer_sankey) {
           color: "black",
           width: 0.5
         },
-       label: beer_sankey.labels,
+       label: data.labels,
        color: "#a67c00"
           },
     
       link: {
-        source: beer_sankey.source,
-        target: beer_sankey.target,
-        value:  beer_sankey.value
+        source: data.source,
+        target: data.target,
+        value:  data.value
       }
     }
     
@@ -351,7 +351,7 @@ function beersankeybuilder(beer_sankey) {
 };
 
 
-function cocktailsankeybuilder(cocktail_sankey) {
+function cocktailsankeybuilder(data) {
     var chartdata = {
       type: "sankey",
       orientation: "h",
@@ -362,14 +362,14 @@ function cocktailsankeybuilder(cocktail_sankey) {
           color: "black",
           width: 0.5
         },
-       label: cocktail_sankey.labels,
+       label: data.labels,
        color: "#a67c00"
           },
     
       link: {
-        source: cocktail_sankey.source,
-        target: cocktail_sankey.target,
-        value:  cocktail_sankey.value
+        source: data.source,
+        target: data.target,
+        value:  data.value
       }
     }
     
@@ -385,8 +385,8 @@ function cocktailsankeybuilder(cocktail_sankey) {
     Plotly.react('sankey_cocktails', chartdata, layout)  
 };
 
-beersankeybuilder();
-cocktailsankeybuilder();
+beersankeybuilder(beer_sankey);
+cocktailsankeybuilder(cocktail_sankey);
 
 // fetch city data for busiest months, tour data (bars and restaurant recommendations) from flask app.py
 function cityData(selCity) {
