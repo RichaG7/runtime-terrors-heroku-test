@@ -42,6 +42,15 @@ input {
     background-color: transparent;
     border: 0px solid;
 }
+
+#city-name {
+  color: goldenrod;
+  text-shadow: 3px 3px white;
+}
+
+h1 {
+  font-size: 100px;
+}
 </style>
 
 <!---main body-->
@@ -199,7 +208,6 @@ var cities = {"Denver": [39.742043, -104.991531], "Philadelphia": [39.95233, -75
 // API key
 const API_KEY = "sk.eyJ1IjoicmljaGFnNyIsImEiOiJja2F4N3loZXcwMnE0MnJvNTVoOGYwejl2In0.MWdCdo5q0s1BADhO6xoJkw";
 const MAP_URL = "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}"
-
 
 var quizData_beer = ['Sour', 'Sweet', 'Malty', 'Bitter', 'Dense'];
 var quizData_cocktail = ['Sour', 'Sweet', 'Smokey', 'Spicy', 'Smooth'];
@@ -418,6 +426,38 @@ function cityData(selCity) {
       td.innerHTML= `<b>${tour}</b>`
       tr.appendChild(td)
       tour_table.appendChild(tr);
+
+    d3.json(queryUrl).then((data) => {
+      var lat = data.[selCity][0];
+      var lng = data.[selCity][1];
+      var myMap = L.map("bar_map", {
+        center: [lat, lng],
+        zoom: 11
+      });
+      L.tileLayer(MAP_URL, {
+        attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
+        maxZoom: 18,
+         id: 'mapbox/streets-v11',
+        accessToken: API_KEY
+      }).addTo(myMap);
+      
+      var response = data.tourdata.top10_bar_location;
+      var markers = L.markerClusterGroup();
+      for (var i = 0; i < response.length; i++) {
+        // console.log(response[i])
+        // Set the data location property to a variable
+        if (response[i].latitude) {
+        
+          var latitude = response[i].latitude;
+      
+          var longitude = response[i].longitude;
+        
+          markers.addLayer(L.marker([latitude, longitude]));
+        }};
+      
+      myMap.addLayer(markers);
+      })
+      
     });
   });
 };
