@@ -469,9 +469,9 @@ function cityData(selCity) {
         accessToken: API_KEY
       }).addTo(myMap);
       
-      var response = data.tourdata.top10_bar_location;
+      var response = data.tourdata[0].top10_bar_location;
       console.log(response);
-      
+
       var markers = L.markerClusterGroup();
       for (var i = 0; i < response.length; i++) {
         // console.log(response[i])
