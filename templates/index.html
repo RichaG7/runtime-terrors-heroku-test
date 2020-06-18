@@ -436,10 +436,11 @@ function cityData(selCity) {
       td.innerHTML= `<b>${tour}</b>`
       tr.appendChild(td)
       tour_table.appendChild(tr);
+    });
 
-    d3.json(queryUrl).then((data) => {
-      var lat = data[selCity][0];
-      var lng = data[selCity][1];
+    function mapbuilder(city, cities) {
+      var lat = cities[selCity][0];
+      var lng = cities[selCity][1];
       var myMap = L.map("bar_map", {
         center: [lat, lng],
         zoom: 11
@@ -466,9 +467,7 @@ function cityData(selCity) {
         }};
       
       myMap.addLayer(markers);
-      })
-      
-    });
+    };
   });
 };
 
