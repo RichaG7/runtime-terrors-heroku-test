@@ -401,7 +401,7 @@ function cityData(selCity) {
     console.log(data) 
 
     banner = document.getElementById('banner')
-    banner.innerHTML = `<h3><b>You got ${city}!`
+    banner.innerHTML = `<h3><b>You got ${selCity}!`
 
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
@@ -438,7 +438,7 @@ function cityData(selCity) {
       tour_table.appendChild(tr);
     });
 
-    function mapbuilder(city, cities) {
+    function mapbuilder(data, cities) {
       var lat = cities[selCity][0];
       var lng = cities[selCity][1];
       var myMap = L.map("bar_map", {
