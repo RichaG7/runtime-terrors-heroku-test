@@ -461,6 +461,7 @@ function cityData(selCity) {
         center: [lat, lng],
         zoom: 11
       });
+
       L.tileLayer(MAP_URL, {
         attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
         maxZoom: 18,
@@ -469,6 +470,8 @@ function cityData(selCity) {
       }).addTo(myMap);
       
       var response = data.tourdata.top10_bar_location;
+      console.log(response);
+      
       var markers = L.markerClusterGroup();
       for (var i = 0; i < response.length; i++) {
         // console.log(response[i])
