@@ -402,7 +402,7 @@ function cityData(selCity) {
 
     banner = document.getElementById('banner')
     banner.innerHTML = `<h3><b>You got ${city}!`
-    
+
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
     tbl.innerHTML="<thead><tr><th>Busiest Months in 2017, by Flight Arrivals</th></thead>"
@@ -438,8 +438,8 @@ function cityData(selCity) {
       tour_table.appendChild(tr);
 
     d3.json(queryUrl).then((data) => {
-      var lat = data.[selCity][0];
-      var lng = data.[selCity][1];
+      var lat = data[selCity][0];
+      var lng = data[selCity][1];
       var myMap = L.map("bar_map", {
         center: [lat, lng],
         zoom: 11
