@@ -401,7 +401,7 @@ function cityData(selCity) {
     console.log(data) 
 
     banner = document.getElementById('banner')
-    banner.innerHTML = `<h3><b>You got ${selCity}!`
+    banner.innerHTML = `<h3><b><center>You got ${selCity}!</center></b></h3>`
 
     // Busy Months
     tbl = document.getElementById('busyMonthsTable')
@@ -468,6 +468,9 @@ function cityData(selCity) {
       
       myMap.addLayer(markers);
     };
+
+    mapbuilder(data, cities);
+    
   });
 };
 
